@@ -1,4 +1,5 @@
 #include"BubbleSort.h"
+#include "Time.h"
 
 template<typename T>
 void Sort(T* arr, int size) {
@@ -10,6 +11,7 @@ void Sort(T* arr, int size) {
 		}
 	}
 }
+
 int main() {
 		int n;
 		cout << "Enter the task num:";
@@ -28,6 +30,22 @@ int main() {
 			Sort(a, 5);
 			for (int i = 0;i < 5;i++)
 				cout << a[i] << endl;
+		}break;
+
+		case 3: {
+			Time time(12, 32, 12);
+			time.ShowTime();
+			time++;
+			time.ShowTime();
+			time--;
+			time.ShowTime();
+			++time;
+			time.ShowTime();
+			--time;
+			time.ShowTime();
+			time << cout;
+			time >> cin;
+			time.ShowTime();
 		}break;
 		}
 

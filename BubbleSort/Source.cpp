@@ -72,7 +72,7 @@ int main() {
 		}
 
 		while (!s.empty()) {
-			while (!s.top().empty())	{
+			while (!s.top().empty()) {
 				cout << s.top().top() << "\t";
 				s.top().pop();
 			}
@@ -120,40 +120,45 @@ int main() {
 		stack<char> s2;
 		stack<char> s3;
 
-		for (int i = 0; i < strlen(s); i++)
-		{
-			if (s[i] == '(')
-				s1.push('(');
-			else if (s[i] == '[')
-				s2.push('[');
-			else if (s[i] == '{')
-				s3.push('{');
-			else if (s[i] == ')') {
-				if (!s1.empty())s1.pop();
-				else {
-					break;
-					cout << "Uncorrect brackets" << endl;
-				}
-			}
-			else if (s[i] == ']') {
-				if (!s2.empty())s2.pop();
-				else {
-					break;
-					cout << "Uncorrect brackets" << endl;
-				}
-			}
-			else if (s[i] == '}') {
-				if (!s3.empty())s3.pop();
-				else{
-					break;
-					cout << "Uncorrect brackets" << endl;
-				}
-			}
-		}
-		if (s1.empty() && s2.empty() && s3.empty())
-			cout << "Correct brackets" << endl;
-		else
+		if (s[0] == ')' || s[0] == ']' || s[0] == '}')
 			cout << "Uncorrect brackets" << endl;
+		else
+		{
+			for (int i = 0; i < strlen(s); i++)
+			{
+				if (s[i] == '(')
+					s1.push('(');
+				else if (s[i] == '[')
+					s2.push('[');
+				else if (s[i] == '{')
+					s3.push('{');
+				else if (s[i] == ')') {
+					if (!s1.empty())s1.pop();
+					else {
+						break;
+						cout << "Uncorrect brackets" << endl;
+					}
+				}
+				else if (s[i] == ']') {
+					if (!s2.empty())s2.pop();
+					else {
+						break;
+						cout << "Uncorrect brackets" << endl;
+					}
+				}
+				else if (s[i] == '}') {
+					if (!s3.empty())s3.pop();
+					else {
+						break;
+						cout << "Uncorrect brackets" << endl;
+					}
+				}
+			}
+			if (s1.empty() && s2.empty() && s3.empty())
+				cout << "Correct brackets" << endl;
+			else
+				cout << "Uncorrect brackets" << endl;
+		}
 	}break;
 
 		// Написать программу, моделирующую работу автомойки. Исходные данные:
@@ -161,7 +166,7 @@ int main() {
 		// Клиенты могут выбирать различные программы мойки из 5 программ различной
 		// длительности(10 - 30мин).Выдать рекомендации по количеству моечных боксов для
 		// участков дороги, имеющих различную величину транспортного потока.
-	case 9: {	
+	case 9: {
 
 	}break;
 

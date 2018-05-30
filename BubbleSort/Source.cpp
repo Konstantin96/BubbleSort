@@ -24,9 +24,13 @@ int main() {
 	cin >> n;
 	switch (n) {
 
+		// Модифицируйте класс с именем Time добавлением статического
+		// метода для получения текущего системного времени.
 	case 1: {
 	}break;
 
+		// Модифицируйте класс с именем Date добавлением статического 
+		// метода для получения текущей даты
 	case 2: {
 	}break;
 
@@ -130,28 +134,37 @@ int main() {
 				if (!s1.empty())s1.pop();
 				else {
 					break;
-					cout << "uncorrect brackets" << endl;
+					cout << "Uncorrect brackets" << endl;
 				}
 			}
 			else if (s[i] == ']') {
 				if (!s2.empty())s2.pop();
 				else {
 					break;
-					cout << "uncorrect brackets" << endl;
+					cout << "Uncorrect brackets" << endl;
 				}
 			}
 			else if (s[i] == '}') {
 				if (!s3.empty())s3.pop();
 				else{
 					break;
-					cout << "uncorrect brackets" << endl;
+					cout << "Uncorrect brackets" << endl;
 				}
 			}
 		}
 		if (s1.empty() && s2.empty() && s3.empty())
 			cout << "Correct brackets" << endl;
 		else
-			cout << "uncorrect brackets" << endl;
+			cout << "Uncorrect brackets" << endl;
+	}break;
+
+		// Написать программу, моделирующую работу автомойки. Исходные данные:
+		// Прибытие машин в общем  случае случайно, но зависит от текущего времени
+		// Клиенты могут выбирать различные программы мойки из 5 программ различной
+		// длительности(10 - 30мин).Выдать рекомендации по количеству моечных боксов для
+		// участков дороги, имеющих различную величину транспортного потока.
+	case 9: {	
+
 	}break;
 
 	}

@@ -21,7 +21,10 @@
     <ClInclude Include="BubbleSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Time.h">
+    <ClInclude Include="StackInt6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackChar7.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

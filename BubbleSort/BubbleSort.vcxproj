@@ -111,8 +111,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="StackChar7.h" />
+    <ClInclude Include="StackInt6.h" />
     <ClInclude Include="Library.h" />
-    <ClInclude Include="Time.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />

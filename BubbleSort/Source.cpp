@@ -1,7 +1,9 @@
 #include "BubbleSort.h"
 #include "Stack_class5.h"
+#include "Stack_class5.cpp"
 #include "StackInt6.h"
 #include "StackChar7.h"
+#include <stack>
 
 template<typename T>
 void Sort(T* arr, int size) {
@@ -50,11 +52,31 @@ int main() {
 		// b) в том же пор€дке(сери€ Ц упор€доченна€ 
 		//                             последовательность максимальной длины)
 	case 5: {
-		Stack5<Stack5<int>> s;
-		Stack5<int> in_s;
+		stack<stack<int>> s;
+		stack<int> in_s;
 
-		int a[10] = { 8,1,2,3,4,5,2,4,9 };
+		int a[9] = { 8,1,2,3,4,5,2,4,9 };
 		s.push(in_s);
+		s.top().push(a[0]);
+		for (int i = 1; i < 9; i++)
+		{
+			if (s.top().top() < a[i])
+				s.top().push(a[i]);
+			else {
+				stack<int>in_st;
+				s.push(in_st);
+				s.top().push(a[i]);
+			}
+		}
+
+		while (!s.empty()) {
+			while (!s.top().empty())	{
+				cout << s.top().top() << "\t";
+				s.top().pop();
+			}
+			cout << endl;
+			s.pop();
+		}
 
 	}break;
 
@@ -64,7 +86,7 @@ int main() {
 		// »спользовать третий стек дл€ сли€ни€ двух последовательностей 
 		// в одну неубывающую последовательность.
 	case 6: {
-		stack* f = new stack(5);
+		stack1* f = new stack1(5);
 		for (int i = 1; i <= 5; i++)
 		{
 			f->push(i);
@@ -84,8 +106,8 @@ int main() {
 		input_char_stack(stack1);
 		input_char_stack(stack2);
 
-		cout << "Length of char stack 1: " << length_of_char_stack(stack1)
-			<< "\nLength of char stack 2: " << length_of_char_stack(stack2) << endl;
+		cout << "Length of char stack1 1: " << length_of_char_stack(stack1)
+			<< "\nLength of char stack1 2: " << length_of_char_stack(stack2) << endl;
 	}break;
 
 		// –азработать класс дл€ работы со стеком. Ёлемент стека Ц символ. 

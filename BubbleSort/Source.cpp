@@ -1,6 +1,4 @@
 #include "BubbleSort.h"
-#include "Stack_class5.h"
-#include "Stack_class5.cpp"
 #include "StackInt6.h"
 #include "StackChar7.h"
 #include <stack>
@@ -117,7 +115,7 @@ int main() {
 		// Использовать стек для проверки правильности расстановки скобок
 		// трех типов (круглых, квадратных и фигурных) во введенном выражении.
 	case 8: {
-		char s[] = "{this{example}[(task)} for my[group]]";
+		char s[] = "}(this{example[(task)} )for my[group]]";
 		stack<char> s1;
 		stack<char> s2;
 		stack<char> s3;

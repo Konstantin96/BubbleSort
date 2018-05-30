@@ -4,6 +4,7 @@
 template<typename T>
 class BubbleSort {
 public:
+
 	static void Sort(T* arr, int size) {
 		for (int i = 0;i < size - 1; i++)
 		{

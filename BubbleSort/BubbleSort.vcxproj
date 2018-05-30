@@ -114,12 +114,9 @@
     <ClInclude Include="StackChar7.h" />
     <ClInclude Include="StackInt6.h" />
     <ClInclude Include="Library.h" />
-    <ClInclude Include="Stack_char8.h" />
-    <ClInclude Include="Stack_class5.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Stack_class5.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

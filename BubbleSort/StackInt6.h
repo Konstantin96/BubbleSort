@@ -1,30 +1,30 @@
 #pragma once
-class stack1 {
+class stack_int {
 private:
 	int size;
 	int* data;
 	size_t ptr;
 public:
 
-	stack1(int stack_size) {
+	stack_int(int stack_size) {
 		size = stack_size;
 		ptr = 0;
 		data = new int[stack_size];
 	}
 
-	~stack1() {
+	~stack_int() {
 		delete[] data;
 	}
 
 	void push(int value) {
 		if (ptr >= (size_t)size)
-			cerr << "stack1 is full\n";
+			cerr << "Stack is full\n";
 		data[this->ptr++] = value;
 	}
 
 	int pop() {
 		if (ptr == 0)
-			cerr<< "stack1 is empty";
+			cerr<< "Stack is empty";
 		int f;
 		f = data[--ptr];
 		return f;

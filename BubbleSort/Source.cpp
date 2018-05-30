@@ -77,7 +77,6 @@ int main() {
 			cout << endl;
 			s.pop();
 		}
-
 	}break;
 
 		// Разработать класс для работы со стеком. 
@@ -86,7 +85,7 @@ int main() {
 		// Использовать третий стек для слияния двух последовательностей 
 		// в одну неубывающую последовательность.
 	case 6: {
-		stack1* f = new stack1(5);
+		stack_int* f = new stack_int(5);
 		for (int i = 1; i <= 5; i++)
 		{
 			f->push(i);
@@ -101,13 +100,13 @@ int main() {
 		// Подсчитать общее число элементов в стеках.
 		// Предусмотреть восстановление исходного расположения элементов в стеках.
 	case 7: {
-		CharStack stack1, stack2;
+		CharStack stack_int, stack2;
 
-		input_char_stack(stack1);
+		input_char_stack(stack_int);
 		input_char_stack(stack2);
 
-		cout << "Length of char stack1 1: " << length_of_char_stack(stack1)
-			<< "\nLength of char stack1 2: " << length_of_char_stack(stack2) << endl;
+		cout << "Length of char stack_int 1: " << length_of_char_stack(stack_int)
+			<< "\nLength of char stack_int 2: " << length_of_char_stack(stack2) << endl;
 	}break;
 
 		// Разработать класс для работы со стеком. Элемент стека – символ. 

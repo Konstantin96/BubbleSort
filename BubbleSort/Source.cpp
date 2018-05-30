@@ -1,4 +1,5 @@
 #include "BubbleSort.h"
+#include "Stack_class5.h"
 #include "StackInt6.h"
 #include "StackChar7.h"
 
@@ -16,7 +17,6 @@ void Sort(T* arr, int size) {
 
 
 int main() {
-	srand(time(NULL));
 		int n;
 		cout << "Enter the task num:";
 		cin >> n;
@@ -50,7 +50,8 @@ int main() {
 	    	// b) в том же порядке(серия – упорядоченная 
 			//                             последовательность максимальной длины)
 		case 5: {
-
+			int a[10] = { 8,1,2,3,4,5,2,4,9 };
+			
 		}break;
 
 			// Разработать класс для работы со стеком. 
@@ -79,8 +80,8 @@ int main() {
 			input_char_stack(stack1);
 			input_char_stack(stack2);
 
-			cout << "Length of char stack 1: " << length_of_char_stack(stack1) <<endl
-				<< "Length of char stack 2: " << length_of_char_stack(stack2) << endl;
+			cout << "Length of char stack 1: " << length_of_char_stack(stack1)
+				<< "\nLength of char stack 2: " << length_of_char_stack(stack2) << endl;
 		}break;
 
 			// Разработать класс для работы со стеком. Элемент стека – символ. 

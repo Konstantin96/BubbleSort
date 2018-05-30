@@ -113,7 +113,45 @@ int main() {
 		// Использовать стек для проверки правильности расстановки скобок
 		// трех типов (круглых, квадратных и фигурных) во введенном выражении.
 	case 8: {
+		char s[] = "{this{example}[(task)} for my[group]]";
+		stack<char> s1;
+		stack<char> s2;
+		stack<char> s3;
 
+		for (int i = 0; i < strlen(s); i++)
+		{
+			if (s[i] == '(')
+				s1.push('(');
+			else if (s[i] == '[')
+				s2.push('[');
+			else if (s[i] == '{')
+				s3.push('{');
+			else if (s[i] == ')') {
+				if (!s1.empty())s1.pop();
+				else {
+					break;
+					cout << "uncorrect brackets" << endl;
+				}
+			}
+			else if (s[i] == ']') {
+				if (!s2.empty())s2.pop();
+				else {
+					break;
+					cout << "uncorrect brackets" << endl;
+				}
+			}
+			else if (s[i] == '}') {
+				if (!s3.empty())s3.pop();
+				else{
+					break;
+					cout << "uncorrect brackets" << endl;
+				}
+			}
+		}
+		if (s1.empty() && s2.empty() && s3.empty())
+			cout << "Correct brackets" << endl;
+		else
+			cout << "uncorrect brackets" << endl;
 	}break;
 
 	}

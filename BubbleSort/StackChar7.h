@@ -51,7 +51,6 @@ public:
 	void push(char character)
 	{
 		CharStackNode *new_elem = new CharStackNode(character);
-
 		if (top == 0)
 		{
 			top = new_elem;
@@ -65,9 +64,7 @@ public:
 	{
 		if (top == 0)
 			return false;
-
 		CharStackNode *del_elem = top;
-
 		character = top->character;
 		top = top->next;
 

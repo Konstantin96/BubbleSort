@@ -20,7 +20,8 @@ int main() {
 		int n;
 		cout << "Enter the task num:";
 		cin >> n;
-		switch (n) {		
+		switch (n) {
+
 		case 1: {		
 		}break;
 			
@@ -80,6 +81,13 @@ int main() {
 
 			cout << "Length of char stack 1: " << length_of_char_stack(stack1) <<endl
 				<< "Length of char stack 2: " << length_of_char_stack(stack2) << endl;
+		}break;
+
+			// –азработать класс дл€ работы со стеком. Ёлемент стека Ц символ. 
+			// »спользовать стек дл€ проверки правильности расстановки скобок
+			// трех типов (круглых, квадратных и фигурных) во введенном выражении.
+		case 8: {
+
 		}break;
 
 		}

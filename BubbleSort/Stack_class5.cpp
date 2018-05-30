@@ -1,4 +1,5 @@
 ﻿#include "Stack_class5.h"
+
 template <typename type>
 Stack5<type>::Stack5() {
 	buf_size = 0;
@@ -45,7 +46,7 @@ void Stack5<type>::pop() {
 template <typename type>
 Stack5<type>::~Stack5() {
 	delete[] els;
-	els = nullptr; // íàäî óäàëèòü àäðåñ 
+	els = nullptr; 
 }
 
 template <typename type>
